@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="obj\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\netcoreapp3.1\Microsoft.Data.Sqlite.dll" />
+    <None Include="bin\Debug\netcoreapp3.1\ProductsDataBase.db" />
+    <None Include="bin\Debug\netcoreapp3.1\ProductsDataBasev2.db" />
+    <None Include="bin\Debug\netcoreapp3.1\ProductsDataBasev2.db-journal" />
+    <None Include="bin\Debug\netcoreapp3.1\SQLitePCLRaw.batteries_v2.dll" />
+    <None Include="bin\Debug\netcoreapp3.1\SQLitePCLRaw.core.dll" />
+    <None Include="bin\Debug\netcoreapp3.1\SQLitePCLRaw.provider.e_sqlite3.dll" />
+    <None Include="bin\Debug\netcoreapp3.1\test_dataBase.db" />
+    <None Include="bin\Debug\netcoreapp3.1\test_dataBase.db-journal" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.0.1" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="6.0.0" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.115.5" />
+  </ItemGroup>
+
+</Project>
