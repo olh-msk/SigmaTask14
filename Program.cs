@@ -1,6 +1,7 @@
 ﻿using Microsoft.Data.Sqlite;
 using System;
 using System.IO;
+using System.Data;
 
 namespace SigmaTask14
 {
@@ -17,25 +18,19 @@ namespace SigmaTask14
                 Console.WriteLine("File Exists");
             }
 
-            
+            //string connectionString = "Data Source=ProductsDataBase.db";
 
-            string path = @"C:\Users\Acer\source\repos\SigmaTask14\bin\Debug\netcoreapp3.1\ProductsDataBase.db";
+            DataBase db = new DataBase(@"Data Source=ProductsDataBase.db");
 
-            string connectionString = @"Data Source=" + Environment.CurrentDirectory + @"\ProductsDataBase.sqlite";
-
-            //Console.WriteLine(connectionString);
-
-            string connectionString2 = @"Data Source=test_dataBase.db";
-            //Console.WriteLine(connectionString2);
-
-
-
-            using (var connection = new SqliteConnection(@"Data Source=ProductsDataBase.db"))
+            Console.WriteLine("List");
+            foreach (Product prod in db.GetProductList())
             {
-                connection.Open();
+                Console.WriteLine(prod);
             }
 
-            //DataBase db = new DataBase(connectionString);
+            Console.WriteLine("Product By Name");
+            Console.WriteLine(db.GetProduct("Eggs"));
+            Console.WriteLine(db.GetProductLinq("Rice"));
         }
     }
 }

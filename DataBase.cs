@@ -16,11 +16,6 @@ namespace SigmaTask14
             {
                 throw new ArgumentNullException("Connection is null");
             }
-
-            //----------------
-            Console.WriteLine(connectionString);
-            //--------------
-
             connection = new SqliteConnection(connectionString);
             connection.Open();
         }

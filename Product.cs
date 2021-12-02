@@ -51,7 +51,7 @@ namespace SigmaTask14
 
         public override string ToString()
         {
-            return $"{id}: {Name}--{Price}--{Weight}--{Amount}--{ExpirationDate.ToShortDateString()}";
+            return $"ID: {id}\tName: {Name}\tPrice: {Price}$\tWeight: {Weight}kg\tAmount: {Amount}\tExpiration date: {ExpirationDate.ToShortDateString()}";
         }
     }
 }
